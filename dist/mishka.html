@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=divice-width, initial-scale=1">
     <link rel="preload" href="fonts/opensans-regular.woff2" as="font">
     <link rel="preload" href="fonts/opensans-bold.woff2" as="font">
-    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="page-header">
+    <header class="page-header page-header--inner-page-wide-resolution">
         <div class="page-header__content-wrapper container">
             <nav class="main-nav">
                 <a href="index.html" class="main-nav__logo">
@@ -26,77 +26,87 @@
     </header>
     <main class="page-main inner-page">
         <h1 class="visually-hidden">Проект: интернет-магазин "Мишка"</h1>
-        <section class="project-description">
-            <div class="project-description__content-wrapper container">
-                <h2 class="visually-hidden">Описание и функционал интернет-магазина "Мишка"</h2>
-                <div class="project-description__flex-wrapper">
-                    <div class="project-description__image-wrapper">
-                        <a href="https://vladmokrousov.github.io/training-project-Mishka/dist/"
-                            class="project-description__link project-description__link--image">
-                            <picture class="project-description__image-bundle">
+        <section class="project-preview project-preview--mishka">
+          <div class="project-preview__content-wrapper container">
+            <h2 class="visually-hidden">Превью и лого проекта</h2>
+            <div class="project-preview__flex-wrapper">
+              <div class="project-preview__image-wrapper project-preview__image-wrapper--mishka">
+                <a href="https://vladmokrousov.github.io/training-project-Mishka/dist/"
+                            class="project-preview__link project-preview__link--image">
+                            <picture class="project-preview__image-bundle">
                                 <source media="(min-width: 1150px)"
                                     srcset="img/page-mishka-desktop.jpg 1x, img/page-mishka-desktop2x.jpg 2x">
                                 <source media="(min-width: 768px)"
                                     srcset="img/page-mishka-tablet.jpg 1x, img/page-mishka-tablet2x.jpg 2x">
-                                <img class="project-description__image" src="img/page-mishka-mobile.jpg"
+                                <img class="project-preview__image" src="img/page-mishka-mobile.jpg"
                                     srcset="img/page-mishka-mobile2x.jpg 2x" width="260" height="260"
                                     alt="Интернет-магазин «Мишка»">
                             </picture>
                         </a>
                         <a href="https://vladmokrousov.github.io/training-project-Mishka/dist/"
-                            class="project-description__link project-description__link--text">Перейти на сайт</a>
-                    </div>
+                            class="project-preview__link project-preview__link--text project-preview__link--text-mishka">Перейти на сайт</a>
+              </div>
+              <img class="project-preview__project-logo project-preview__project-logo--mishka" src="img/logo-mishka.svg" width="150" height="100"
+                        alt="Логотип проекта «Мишка»" >
+             
+            </div>
+          </div>
+        </section>
+        <section class="project-description">
+            <div class="project-description__content-wrapper container">
+                <h2 class="visually-hidden">Описание и функционал интернет-магазина "Мишка"</h2>
+              
                     <div class="project-description__functional-wrapper">
                         <h3 class="project-description__title project-description__title--functional"><b
-                                class="project-description__title-strong">Функционал</b> сайта:</h3>
+                                class="project-description__title-strong project-description__title-strong--mishka">Функционал</b> сайта:</h3>
                         <ul class="project-description__list project-description__list--functional">
-                            <li class="project-description__item project-description__item--functional">
+                            <li class="project-description__item project-description__item--mishka project-description__item--functional">
                                 Доступны три страницы: "Главная", "Каталог товаров" и "Вязание на заказ"
                             </li>
-                            <li class="project-description__item project-description__item--functional">
+                            <li class="project-description__item project-description__item--mishka project-description__item--functional">
                                 При нажатии на кнопку "заказать" на "Главной" появляется модальное окно с выбором
                                 размера
                             </li>
-                            <li class="project-description__item project-description__item--functional">
+                            <li class="project-description__item project-description__item--mishka project-description__item--functional">
                                 В "Каталоге товаров" нажатие на иконку корзины в карточке товара вызовет то же окно, что
                                 и на "Главной"
                             </li>
-
                         </ul>
                     </div>
-                </div>
+               
                 <div class="project-description__technologies-wrapper">
-                    <h3 class="project-description__title project-description__title--technologies">Технологии и
+                    <h3 class="project-description__title project-description__title--mishka project-description__title--technologies">Технологии и
                         особенности:</h3>
                     <ul class="project-description__list project-description__list--technologies">
-                        <li class="project-description__item project-description__item--technologies">
+                        <li class="project-description__item project-description__item--mishka project-description__item--technologies">
                             Сайт сделан на html, css и js с применением jquery
                         </li>
-                        <li class="project-description__item project-description__item--technologies">
+                        <li class="project-description__item project-description__item--mishka project-description__item--technologies">
                             В работе использовался препроцессор sass, что ускоряет работу и обеспечивает модульность
                             верстки
                         </li>
-                        <li class="project-description__item project-description__item--technologies">
+                        <li class="project-description__item project-description__item--mishka project-description__item--technologies">
                             При верстке использовалась методология БЭМ. Это обеспечивает реиспользуемость элементов и
                             лучшую поддержку
                         </li>
-                        <li class="project-description__item project-description__item--technologies">
+                        <li class="project-description__item project-description__item--mishka project-description__item--technologies">
                             Для рутинных операций и сборки проекта использовался gulp
                         </li>
-                        <li class="project-description__item project-description__item--technologies">
+                        <li class="project-description__item project-description__item--mishka project-description__item--technologies">
                             Сайт адаптивный, то есть сделаны отдельные версии для мобильных устройств, планшетов и
                             компьютеров
                         </li>
 
-                        <li class="project-description__item project-description__item--technologies">
+                        <li class="project-description__item project-description__item--mishka project-description__item--technologies project-description__item--temporarily-hidden">
                             Верстка семантична, что улучшает ее восприятие браузерами. Такой сайт проще продвигать и
                             легче поддерживать
                         </li>
-                        <li class="project-description__item project-description__item--technologies">
+                        <li class="project-description__item project-description__item--mishka project-description__item--technologies project-description__item--temporarily-hidden">
                             Файл стилей, иконки и картинки минифицированы. Для каждого устройства скачиваются картинки
                             оптимального размера, что позволяет сайту загружаться быстрее и экономит трафик
                         </li>
                     </ul>
+                    <button class="project-description__btn-for-ul project-description__btn-for-ul--mishka">Показать все</button>
                 </div>
             </div>
         </section>
@@ -106,7 +116,7 @@
                 <h2 class="contacts__title">Контакты</h2>
                 <div class="contacts__item-wrapper">
                     <span class="contacts__item contacts__item--email">mokrousov01@ya.ru</span>
-                    <span class="contacts__item contacts__item--telegram">+7(914)-889-64-23</span>
+                    <span class="contacts__item contacts__item--telegram">+7(924)-618-99-43</span>
                     <span class="contacts__item contacts__item--phone">+7(924)-618-99-43</span>
                 </div>
             </div>
@@ -126,7 +136,23 @@
         </div>
     </footer>
 
-    <script src="js/script.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/work-with-ul.js"></script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(65541076, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/65541076" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>

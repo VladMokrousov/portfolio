@@ -2,119 +2,144 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <title>Портфолио Влада Мокроусова</title>
-    <meta name="viewport" content="width=divice-width, initial-scale=1">
-    <link rel="preload" href="fonts/opensans-regular.woff2" as="font">
-    <link rel="preload" href="fonts/opensans-bold.woff2" as="font">
-    <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Портфолио Влада Мокроусова</title>
+  <meta name="viewport" content="width=divice-width, initial-scale=1">
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font">
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="page-header">
-        <div class="page-header__content-wrapper container">
-            <nav class="main-nav">
-                <a href="index.html" class="main-nav__logo">
-                    <img class="main-nav__logo-image" src="img/logo.svg" width="40" height="40"
-                        alt="Портфолио Влада Мокроусова">
+  <header class="page-header page-header--inner-page-wide-resolution">
+    <div class="page-header__content-wrapper container">
+      <nav class="main-nav">
+        <a href="index.html" class="main-nav__logo">
+          <img class="main-nav__logo-image" src="img/logo.svg" width="40" height="40" alt="Портфолио Влада Мокроусова">
 
-                </a>
-            </nav>
-            <span class="page-header__email">mokrousov01@ya.ru</span>
+        </a>
+      </nav>
+      <span class="page-header__email">mokrousov01@ya.ru</span>
+    </div>
+  </header>
+  <main class="page-main inner-page">
+    <h1 class="visually-hidden">Проект: интернет-магазин "Девайс"</h1>
+    <section class="project-preview project-preview--device">
+      <div class="project-preview__content-wrapper container">
+        <h2 class="visually-hidden">Превью и лого проекта</h2>
+        <div class="project-preview__flex-wrapper">
+          <div class="project-preview__image-wrapper project-preview__image-wrapper--device">
+            <a href="https://vladmokrousov.github.io/training-project-Device/"
+              class="project-preview__link project-preview__link--image">
+              <picture class="project-preview__image-bundle">
+                <source media="(min-width: 1150px)"
+                  srcset="img/page-device-desktop.jpg 1x, img/page-device-desktop2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/page-device-tablet.jpg 1x, img/page-device-tablet2x.jpg 2x">
+                <img class="project-preview__image" src="img/page-device-mobile.jpg"
+                  srcset="img/page-device-mobile2x.jpg 2x" width="260" height="260" alt="Интернет-магазин «Девайс»">
+              </picture>
+            </a>
+            <a href="https://vladmokrousov.github.io/training-project-Device/"
+              class="project-preview__link project-preview__link--text project-preview__link--text-device">Перейти на сайт</a>
+
+
+          </div>
+          <img class="project-preview__project-logo project-preview__project-logo--device" src="img/logo-device.svg" width="150" height="100"
+                    alt="Логотип проекта «Девайс»" >
+         
         </div>
-    </header>
-    <main class="page-main inner-page">
-        <h1 class="visually-hidden">Проект: интернет-магазин "Девайс"</h1>
-        <section class="project-description">
-            <div class="project-description__content-wrapper container">
-                <h2 class="visually-hidden">Описание и функционал интернет-магазина "Девайс"</h2>
-                <div class="project-description__flex-wrapper">
-                    <div class="project-description__image-wrapper">
-                        <a href="https://vladmokrousov.github.io/training-project-Device/"
-                            class="project-description__link project-description__link--image">
-                            <picture class="project-description__image-bundle">
-                                <source media="(min-width: 1150px)"
-                                    srcset="img/page-device-desktop.jpg 1x, img/page-device-desktop2x.jpg 2x">
-                                <source media="(min-width: 768px)"
-                                    srcset="img/page-device-tablet.jpg 1x, img/page-device-tablet2x.jpg 2x">
-                                <img class="project-description__image" src="img/page-device-mobile.jpg"
-                                    srcset="img/page-device-mobile2x.jpg 2x" width="260" height="260"
-                                    alt="Интернет-магазин «Девайс»">
-                            </picture>
-                        </a>
-                        <a href="https://vladmokrousov.github.io/training-project-Device/"
-                            class="project-description__link project-description__link--text">Перейти на сайт</a>
-                    </div>
-                    <div class="project-description__functional-wrapper">
-                        <h3 class="project-description__title project-description__title--functional"><b
-                                class="project-description__title-strong">Функционал</b> сайта:</h3>
-                        <ul class="project-description__list project-description__list--functional">
-                            <li class="project-description__item project-description__item--functional">
-                                Доступны две страницы: "Главная" и "Моноподы для селфи" в разделе "Каталог товаров"
-                            </li>
-                            <li class="project-description__item project-description__item--functional">
-                                На "Главной" реализован слайдер, переключающий слайды в автоматическом и ручном режимах
-                            </li>
-                            <li class="project-description__item project-description__item--functional">
-                                На "Главной" есть табы, переключающие описания доставки, гарантии и кредита
-                            </li>
-                            <li class="project-description__item project-description__item--functional">
-                                Нажатие на карту на "Главной" вызовет интерактивную карту. Нажатие на кнопку "напишите
-                                нам" - окно с фокусом в первом поле для ввода
-                            </li>
+      </div>
+    </section>
+    <section class="project-description">
+      <div class="project-description__content-wrapper container">
+        <h2 class="visually-hidden">Описание и функционал интернет-магазина "Девайс"</h2>
+         
+          <div class="project-description__functional-wrapper">
+            <h3 class="project-description__title project-description__title--functional"><b
+                class="project-description__title-strong project-description__title-strong--device">Функционал</b> сайта:</h3>
+            <ul class="project-description__list project-description__list--functional">
+              <li class="project-description__item project-description__item--device project-description__item--functional">
+                Доступны две страницы: "Главная" и "Моноподы для селфи" в разделе "Каталог товаров"
+              </li>
+              <li class="project-description__item project-description__item--device project-description__item--functional">
+                На "Главной" реализован слайдер, переключающий слайды в автоматическом и ручном режимах
+              </li>
+              <li class="project-description__item project-description__item--device project-description__item--functional">
+                На "Главной" есть табы, переключающие описания доставки, гарантии и кредита
+              </li>
+              <li class="project-description__item project-description__item--device project-description__item--functional">
+                Клик по карте на "Главной" вызовет интерактивную карту. Нажатие на кнопку "напишите
+                нам" - окно с фокусом в первом поле для ввода
+              </li>
 
-                            <li class="project-description__item project-description__item--functional">
-                                На странице "Моноподы для селфи" реализован выбор диапазона стоимости товара
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="project-description__technologies-wrapper">
-                    <h3 class="project-description__title project-description__title--technologies">Технологии и
-                        особенности:</h3>
-                    <ul class="project-description__list project-description__list--technologies">
-                        <li class="project-description__item project-description__item--technologies">
-                            Сайт сделан на html, css и js с применением jquery
-                        </li>
-                        <li class="project-description__item project-description__item--technologies">
-                            Верстка семантична, что улучшает ее восприятие браузерами. Такой сайт проще продвигать и
-                            легче поддерживать
-                        </li>
-                        <li class="project-description__item project-description__item--technologies">
-                            Файл стилей, иконки и картинки минифицированы, что позволяет сайту загружаться быстрее
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="contacts">
-            <div class="contacts__content-wrapper container">
-                <h2 class="contacts__title">Контакты</h2>
-                <div class="contacts__item-wrapper">
-                    <span class="contacts__item contacts__item--email">mokrousov01@ya.ru</span>
-                    <span class="contacts__item contacts__item--telegram">+7(914)-889-64-23</span>
-                    <span class="contacts__item contacts__item--phone">+7(924)-618-99-43</span>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="page-footer">
-        <div class="page-footer__wrapper container">
-            <div class="page-footer__logo-wrapper">
-                <a href="index.html" class="page-footer__logo">
-                    <img class="page-footer__logo-image" src="img/logo.svg" width="40" height="40"
-                        alt="Портфолио Влада Мокроусова">
-                </a>
-            </div>
-            <div class="page-footer__button-wrapper">
-                <button class="page-footer__btn">Наверх</button>
-            </div>
+              <li class="project-description__item project-description__item--device project-description__item--functional">
+                На странице "Моноподы для селфи" реализован выбор диапазона стоимости товара
+              </li>
+            </ul>
+          </div>
+       
+        <div class="project-description__technologies-wrapper">
+          <h3 class="project-description__title project-description__title--device project-description__title--technologies">Технологии и
+            особенности:</h3>
+          <ul class="project-description__list project-description__list--technologies">
+            <li class="project-description__item project-description__item--device project-description__item--technologies">
+              Сайт сделан на html, css и js с применением jquery
+            </li>
+            <li class="project-description__item project-description__item--device project-description__item--technologies">
+              Верстка семантична, что улучшает ее восприятие браузерами. Такой сайт проще продвигать и
+              легче поддерживать
+            </li>
+            <li class="project-description__item project-description__item--device project-description__item--technologies">
+              Файл стилей, иконки и картинки минифицированы, что позволяет сайту загружаться быстрее
+            </li>
+          </ul>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="js/script.min.js"></script>
+    <section class="contacts">
+      <div class="contacts__content-wrapper container">
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__item-wrapper">
+          <span class="contacts__item contacts__item--email">mokrousov01@ya.ru</span>
+          <span class="contacts__item contacts__item--telegram">+7(924)-618-99-43</span>
+          <span class="contacts__item contacts__item--phone">+7(924)-618-99-43</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper container">
+      <div class="page-footer__logo-wrapper">
+        <a href="index.html" class="page-footer__logo">
+          <img class="page-footer__logo-image" src="img/logo.svg" width="40" height="40"
+            alt="Портфолио Влада Мокроусова">
+        </a>
+      </div>
+      <div class="page-footer__button-wrapper">
+        <button class="page-footer__btn">Наверх</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(65541076, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/65541076" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>

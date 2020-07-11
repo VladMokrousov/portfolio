@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=divice-width, initial-scale=1">
     <link rel="preload" href="fonts/opensans-regular.woff2" as="font">
     <link rel="preload" href="fonts/opensans-bold.woff2" as="font">
-    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="page-header">
+    <header class="page-header page-header--inner-page-wide-resolution">
         <div class="page-header__content-wrapper container">
             <nav class="main-nav">
                 <a href="index.html" class="main-nav__logo">
@@ -26,37 +26,43 @@
     </header>
     <main class="page-main inner-page">
         <h1 class="visually-hidden">Проект: мое портфолио</h1>
+
+        <section class="project-preview">
+          <div class="project-preview__content-wrapper container">
+            <h2 class="visually-hidden">Превью и лого проекта</h2>
+            <div class="project-preview__flex-wrapper">
+              <div class="project-preview__image-wrapper">
+                  <picture class="project-preview__image-bundle">
+                      <source media="(min-width: 1150px)"
+                          srcset="img/page-portfolio-desktop.jpg 1x, img/page-portfolio-desktop2x.jpg 2x">
+                      <source media="(min-width: 768px)"
+                          srcset="img/page-portfolio-tablet.jpg 1x, img/page-portfolio-tablet2x.jpg 2x">
+                      <img class="project-preview__image" src="img/page-portfolio-mobile.jpg"
+                          srcset="img/page-portfolio-mobile2x.jpg 2x" width="260" height="260"
+                          alt="Мое порфтолио">
+                  </picture>
+              </div>
+              <img class="project-preview__project-logo" src="img/logo.svg" width="50" height="50"
+                        alt="Логотип проекта «Мое портфолио»" >
+             
+            </div>
+          </div>
+        </section>
+
         <section class="project-description">
             <div class="project-description__content-wrapper container">
-                <h2 class="visually-hidden">Описание и функционал моего портфолио</h2>
-                <div class="project-description__flex-wrapper">
-                    <div class="project-description__image-wrapper">
-
-                        <picture class="project-description__image-bundle">
-                            <source media="(min-width: 1150px)"
-                                srcset="img/page-portfolio-desktop.jpg 1x, img/page-portfolio-desktop2x.jpg 2x">
-                            <source media="(min-width: 768px)"
-                                srcset="img/page-portfolio-tablet.jpg 1x, img/page-portfolio-tablet2x.jpg 2x">
-                            <img class="project-description__image" src="img/page-portfolio-mobile.jpg"
-                                srcset="img/page-portfolio-mobile2x.jpg 2x" width="260" height="260"
-                                alt="Мое порфтолио">
-                        </picture>
-
-                    </div>
-                    <div class="project-description__functional-wrapper">
-                        <h3 class="project-description__title project-description__title--functional"><b
+                <h2 class="visually-hidden">Описание и функционал моего портфолио</h2>  
+                <div class="project-description__functional-wrapper">
+                    <h3 class="project-description__title project-description__title--functional"><b
                                 class="project-description__title-strong">Функционал</b> сайта:</h3>
-                        <ul class="project-description__list project-description__list--functional">
-                            <li class="project-description__item project-description__item--functional">
-                                Доступна "Главная" и страницы каждого выполненного проекта
-                            </li>
-                            <li class="project-description__item project-description__item--functional">
-                                При нажатии на кнопку "наверх" произойдет прокрутка страницы до самого верха :)
-                            </li>
+                    <ul class="project-description__list project-description__list--functional">
+                        <li class="project-description__item project-description__item--functional">
+                                Все страницы сайта доступны для просмотра
+                        </li>
                            
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
+                
                 <div class="project-description__technologies-wrapper">
                     <h3 class="project-description__title project-description__title--technologies">Технологии и
                         особенности:</h3>
@@ -80,22 +86,24 @@
                             компьютеров
                         </li>
 
-                        <li class="project-description__item project-description__item--technologies">
+                        <li class="project-description__item project-description__item--technologies project-description__item--temporarily-hidden">
                             Верстка семантична, что улучшает ее восприятие браузерами. Такой сайт проще продвигать и
                             легче поддерживать
                         </li>
-                        <li class="project-description__item project-description__item--technologies">
-                            Файл стилей, js иконки и картинки минифицированы. Для каждого устройства скачиваются картинки
+                        <li class="project-description__item project-description__item--technologies project-description__item--temporarily-hidden">
+                            Файл стилей, иконки и картинки минифицированы. Для каждого устройства скачиваются картинки
                             оптимального размера, что позволяет сайту загружаться быстрее и экономит трафик
                         </li>
-                        <li class="project-description__item project-description__item--technologies">
+                        <li class="project-description__item project-description__item--technologies project-description__item--temporarily-hidden">
                             Проведена ретинизация изображений. Это значит, что пользователи, устройства которых обладают экранами с повышенной плотностью пикселей,
                             например, пользователи Apple, увидят изображения в улучшенном качестве
                         </li>
-                        <li class="project-description__item project-description__item--technologies">
+                        <li class="project-description__item project-description__item--technologies project-description__item--temporarily-hidden">
                             Выполнена предзагрузка шрифтов в html. Это позволяет показать пользователю контент сайта максимально быстро даже при низкой скорости интернета
                         </li>
+                       
                     </ul>
+                    <button class="project-description__btn-for-ul">Показать все</button>
                 </div>
             </div>
         </section>
@@ -105,7 +113,7 @@
                 <h2 class="contacts__title">Контакты</h2>
                 <div class="contacts__item-wrapper">
                     <span class="contacts__item contacts__item--email">mokrousov01@ya.ru</span>
-                    <span class="contacts__item contacts__item--telegram">+7(914)-889-64-23</span>
+                    <span class="contacts__item contacts__item--telegram">+7(924)-618-99-43</span>
                     <span class="contacts__item contacts__item--phone">+7(924)-618-99-43</span>
                 </div>
             </div>
@@ -125,7 +133,23 @@
         </div>
     </footer>
 
-    <script src="js/script.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/work-with-ul.js"></script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(65541076, "init", {
+       clickmap:true,
+       trackLinks:true,
+       accurateTrackBounce:true,
+       webvisor:true
+  });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/65541076" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>
