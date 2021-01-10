@@ -1,0 +1,372 @@
+.portfolio {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.portfolio__title {
+  margin-top: 0;
+  margin-bottom: 60px;
+
+  text-align: center;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+.portfolio__title-strong {
+  font-weight: 700;
+  color: #bd1bf7;
+}
+.portfolio__list {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &::before {
+    content: 'my works';
+    position: absolute;
+    top: -35px;
+    left: 5px;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+    color: #f2ebf5;
+    text-transform: uppercase;
+    z-index: -1;
+  }
+}
+
+.portfolio__item {
+  position: relative;
+  margin-bottom: 20px;
+  width: 260px;
+
+  min-height: 260px;
+  border-radius: 20px;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 5px 5px 0 rgba(133, 133, 133, 0.4);
+}
+.portfolio__item:last-child {
+  margin-bottom: 0;
+}
+.portfolio__item--eightball {
+  background: linear-gradient(to bottom right, #fcde47, #a68a00);
+}
+.portfolio__item--pixel_hunter {
+  background: linear-gradient(to bottom right, #a8e3c8, #719987);
+}
+.portfolio__item--toxin {
+  background: linear-gradient(to bottom right, #f4f4f6, #c0c0c2);
+}
+.portfolio__item--kekstagram {
+  background: linear-gradient(to bottom right, #878787, #3d3d3d);
+}
+.portfolio__item--code-and-magic {
+  background: linear-gradient(to bottom right, #8c8eff, #090c9e);
+}
+.portfolio__item--portfolio {
+  background: linear-gradient(to bottom right, #d257ff, #651482);
+}
+.portfolio__item--mishka {
+  background: linear-gradient(to bottom right, #7affe4, #469484);
+}
+.portfolio__item--device {
+  background: linear-gradient(to bottom right, #ffc800, #947400);
+}
+.portfolio__item--barbershop {
+  background: linear-gradient(to bottom right, #7f7f7f, #000);
+}
+
+.portfolio__link {
+  display: block;
+  width: 100%;
+  height: 260px;
+  cursor: pointer;
+
+  &:hover > svg,
+  &:hover > img,
+  &:focus > svg,
+  &:focus > img {
+    transform: scale(1.1);
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.portfolio__logo {
+  position: absolute;
+  transition-duration: 0.3s;
+}
+.portfolio__logo--eightball {
+  top: 80px;
+  left: 80px;
+}
+.portfolio__logo--pixel_hunter {
+  top: 90px;
+  left: 40px;
+}
+.portfolio__logo--toxin {
+  top: 95px;
+  left: 40px;
+}
+.portfolio__logo--kekstagram {
+  top: 45px;
+  left: 42px;
+}
+.portfolio__logo--code-and-magic {
+  top: 120px;
+  left: 20px;
+}
+.portfolio__logo--portfolio {
+  top: 70px;
+  left: 85px;
+}
+.portfolio__logo--mishka {
+  top: 80px;
+  left: 35px;
+}
+.portfolio__logo--device {
+  top: 100px;
+  left: 40px;
+}
+.portfolio__logo--barbershop {
+  top: 80px;
+  left: 20px;
+}
+
+.portfolio__description-wrapper--eightball {
+  border-top: 4px solid #5005b3;
+  border-image: linear-gradient(to right, #5005b3 0%, transparent 100%);
+}
+.portfolio__description-wrapper--pixel_hunter {
+  border-top: 4px solid #de1f1f;
+  border-image: linear-gradient(to right, #de1f1f 0%, transparent 100%);
+}
+.portfolio__description-wrapper--toxin {
+  border-top: 4px solid #6b8dfa;
+  border-image: linear-gradient(to right, #6b8dfa 0%, transparent 100%);
+}
+.portfolio__description-wrapper--kekstagram {
+  border-top: 4px solid #f3d71c;
+  border-image: linear-gradient(to right, #f3d71c 0%, transparent 100%);
+}
+
+.portfolio__description-wrapper--code-and-magic {
+  border-top: 4px solid #29ff6d;
+  border-image: linear-gradient(to right, #29ff6d 0%, transparent 100%);
+}
+.portfolio__description-wrapper--portfolio,
+.portfolio__description-wrapper--barbershop {
+  border-top: 4px solid #fff;
+  border-image: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+.portfolio__description-wrapper--mishka,
+.portfolio__description-wrapper--device {
+  border-top: 4px solid #000;
+  border-image: linear-gradient(to right, #000 0%, transparent 100%);
+}
+
+.portfolio__description-wrapper {
+  padding: 15px 20px 20px;
+  border-image-slice: 1;
+}
+.portfolio__description-link {
+  line-height: 1.25;
+  color: #fff;
+  transition-duration: 0.3s;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+.portfolio__description-link--toxin {
+  color: #000;
+}
+.portfolio__highlighted--eightball {
+  color: #5005b3;
+}
+.portfolio__highlighted--pixel_hunter,
+.portfolio__highlighted--mishka,
+.portfolio__highlighted--device {
+  color: #000;
+}
+.portfolio__highlighted--toxin {
+  color: #003af7;
+}
+.portfolio__highlighted--kekstagram {
+  color: rgb(243, 215, 28);
+}
+
+.portfolio__highlighted--code-and-magic {
+  color: #29ff6d;
+}
+
+.portfolio__highlighted--portfolio {
+  color: #15ff00;
+}
+
+.portfolio__highlighted--barbershop {
+  color: #ff9c38;
+}
+
+@media (min-width: $tablet-width) {
+  .portfolio {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  .portfolio__title {
+    margin-bottom: 120px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+  .portfolio__br--one {
+    display: none;
+  }
+
+  .portfolio__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    &::before {
+      top: -75px;
+      left: 60px;
+      font-size: 100px;
+      line-height: 100px;
+    }
+  }
+  .portfolio__item {
+    margin-bottom: 16px;
+    width: 325px;
+    min-height: 325px;
+    border-radius: 30px;
+  }
+  .portfolio__item:last-child {
+    margin-bottom: 0;
+  }
+  .portfolio__link {
+    height: 325px;
+  }
+  .portfolio__logo--eightball {
+    top: 90px;
+    left: 100px;
+    width: 120px;
+    height: 120px;
+  }
+  .portfolio__logo--pixel_hunter {
+    top: 115px;
+    left: 60px;
+    width: 200px;
+    height: 88px;
+  }
+  .portfolio__logo--toxin {
+    top: 120px;
+    left: 60px;
+    width: 200px;
+    height: 76px;
+  }
+  .portfolio__logo--kekstagram {
+    top: 55px;
+    left: 50px;
+    width: 220px;
+    height: 215.6px;
+  }
+  .portfolio__logo--code-and-magic {
+    top: 150px;
+    left: 40px;
+    width: 240px;
+    height: 25.4px;
+  }
+  .portfolio__logo--portfolio {
+    top: 90px;
+    left: 110px;
+    width: 110px;
+    height: 110px;
+  }
+  .portfolio__logo--mishka {
+    top: 90px;
+    left: 50px;
+    width: 220px;
+    height: 140px;
+  }
+  .portfolio__logo--device {
+    top: 130px;
+    left: 50px;
+    width: 220px;
+  }
+  .portfolio__logo--barbershop {
+    top: 105px;
+    left: 40px;
+    width: 240px;
+    height: 120px;
+  }
+  .portfolio__description-wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .portfolio__description-link {
+    font-size: 16px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .portfolio {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .portfolio__title {
+    margin-bottom: 160px;
+
+    text-align: left;
+    font-size: 53px;
+    line-height: 57px;
+  }
+  .portfolio__list::before {
+    top: -120px;
+    left: 90px;
+    font-size: 160px;
+    line-height: 160px;
+  }
+
+  .portfolio__item {
+    margin-bottom: 19px;
+    width: 335px;
+    min-height: 335px;
+  }
+  .portfolio__item:nth-child(n + 7) {
+    margin-bottom: 0;
+  }
+  .portfolio__logo--eightball {
+    top: 95px;
+    left: 110px;
+  }
+  .portfolio__logo--pixel_hunter,
+  .portfolio__logo--toxin {
+    left: 65px;
+  }
+
+  .portfolio__logo--kekstagram,
+  .portfolio__logo--mishka {
+    left: 55px;
+  }
+  .portfolio__logo--code-and-magic,
+  .portfolio__logo--barbershop {
+    left: 45px;
+  }
+  .portfolio__logo--portfolio {
+    top: 95px;
+    left: 115px;
+  }
+
+  .portfolio__logo--device {
+    top: 130px;
+    left: 55px;
+  }
+}

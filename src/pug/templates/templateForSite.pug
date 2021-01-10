@@ -1,0 +1,21 @@
+
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    title #{title}
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel='preload' href='assets/fonts/opensans-regular.woff2' as='font')
+    link(rel='preload' href='assets/fonts/opensans-bold.woff2' as='font')
+    
+    link(rel="stylesheet" href="assets/css/main.css") 
+    block head
+
+  body
+    block main
+
+    script(src='assets/js/vendors.js')
+    script(src='assets/js/main.js')
+    block script

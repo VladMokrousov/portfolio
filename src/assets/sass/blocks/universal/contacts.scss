@@ -1,0 +1,188 @@
+.contacts {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #bd1bf7, #15ff00);
+  }
+}
+.contacts--eightball::after,
+.contacts--pixel-hunter::after,
+.contacts--toxin::after,
+.contacts--kekstagram::after,
+.contacts--code-and-magic::after,
+.contacts--portfolio::after,
+.contacts--mishka::after,
+.contacts--device::after,
+.contacts--barbershop::after {
+  background: none;
+  background-color: #c7c7c7;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #bd1bf7;
+}
+.contacts__title--eightball {
+  color: #4f00b6;
+}
+.contacts__title--pixel-hunter {
+  color: #719987;
+}
+.contacts__title--toxin {
+  color: #5a4b7b;
+}
+.contacts__title--kekstagram {
+  color: #efcf00;
+}
+.contacts__title--code-and-magic {
+  color: #4749fd;
+}
+.contacts__title--mishka {
+  color: #63d1bb;
+}
+.contacts__title--device {
+  color: #ffc600;
+}
+.contacts__title--barbershop {
+  color: #ff9c38;
+}
+
+.contacts__item {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+
+  font-size: 17px;
+  line-height: 30px;
+}
+.contacts__icon {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+}
+.contacts__icon--eightball path,
+.contacts__icon--pixel-hunter path,
+.contacts__icon--toxin path,
+.contacts__icon--kekstagram path,
+.contacts__icon--code-and-magic path,
+.contacts__icon--portfolio path,
+.contacts__icon--mishka path,
+.contacts__icon--device path,
+.contacts__icon--barbershop path {
+  fill: #1a1a1a;
+}
+
+.contacts__item--telegram {
+  transition-duration: 0.3s;
+  outline: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 32px;
+    width: 145px;
+    height: 1px;
+    background-color: #bd1bf7;
+    transition-duration: 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+.contacts__item--telegram.contacts__item--eightball::after {
+  background-color: #4f00b6;
+}
+.contacts__item--telegram.contacts__item--pixel-hunter::after {
+  background-color: #719987;
+}
+.contacts__item--telegram.contacts__item--toxin::after {
+  background-color: #5a4b7b;
+}
+.contacts__item--telegram.contacts__item--kekstagram::after {
+  background-color: #efcf00;
+}
+.contacts__item--telegram.contacts__item--code-and-magic::after {
+  background-color: #4749fd;
+}
+.contacts__item--telegram.contacts__item--mishka::after {
+  background-color: #63d1bb;
+}
+.contacts__item--telegram.contacts__item--device::after {
+  background-color: #ffc600;
+}
+.contacts__item--telegram.contacts__item--barbershop::after {
+  background-color: #ff9c38;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    // padding-top: 60px;
+    // padding-bottom: 75px;
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+
+  .contacts__title {
+    margin-left: -7px;
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  .contacts__item {
+    display: inline;
+  }
+  .contacts__icon {
+    top: 3px;
+  }
+  .contacts__item--email {
+    margin-right: 28px;
+  }
+  .contacts__item--telegram::after {
+    top: 28px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .contacts {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+  .contacts__content-wrapper {
+    display: flex;
+  }
+  .contacts__title {
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+
+  .contacts__item {
+    margin-top: 33px;
+    font-size: 18px;
+  }
+  .contacts__icon {
+    top: 7px;
+  }
+  .contacts__item--telegram {
+    height: 30px;
+    &::after {
+      top: 32px;
+      width: 153px;
+    }
+  }
+}

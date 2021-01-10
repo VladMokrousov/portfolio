@@ -1,0 +1,110 @@
+.btn-up {
+  position: fixed;
+  right: 15px;
+  bottom: 20vh;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 0;
+  opacity: 0;
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(133, 133, 133, 0.4);
+  transition-duration: 0.3s;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #f2f2f2;
+}
+.btn-up--toxin path {
+  fill: #5a4b7b;
+}
+.btn-up--code-and-magic path {
+  fill: #4749fd;
+}
+.btn-up--kekstagram path,
+.btn-up--mishka path,
+.btn-up--device path,
+.btn-up--barbershop path {
+  fill: #1a1a1a;
+}
+.btn-up__arrow {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 30px;
+  height: 30px;
+  transform: rotate(-90deg);
+}
+@media (min-width: 985px) and (max-width: 1149px) {
+  .btn-up {
+    right: 5%;
+  }
+}
+@media (min-width: $desktop-width) {
+  .btn-up path {
+    transition-duration: 0.3s;
+  }
+  .btn-up {
+    right: 15px;
+
+    &:hover,
+    &:focus {
+      background-color: #bd1bf7;
+    }
+    &:hover path,
+    &:focus path {
+      fill: #fff;
+    }
+  }
+  .btn-up--eightball:hover,
+  .btn-up--eightball:focus {
+    background-color: #4f00b6;
+  }
+  .btn-up--pixel-hunter:hover,
+  .btn-up--pixel-hunter:focus {
+    background-color: #719987;
+  }
+  .btn-up--toxin:hover,
+  .btn-up--toxin:focus {
+    background-color: #5a4b7b;
+  }
+  .btn-up--kekstagram:hover,
+  .btn-up--kekstagram:focus {
+    background-color: #2e2e2e;
+  }
+  .btn-up--kekstagram:hover path,
+  .btn-up--kekstagram:focus path {
+    fill: #efcf00;
+  }
+  .btn-up--code-and-magic:hover,
+  .btn-up--code-and-magic:focus {
+    background-color: #4749fd;
+  }
+  .btn-up--mishka:hover,
+  .btn-up--mishka:focus {
+    background-color: #63d1bb;
+  }
+
+  .btn-up--device:hover,
+  .btn-up--device:focus {
+    background-color: #ffc600;
+  }
+  .btn-up--device:hover path,
+  .btn-up--device:focus path {
+    fill: #1a1a1a;
+  }
+
+  .btn-up--barbershop:hover,
+  .btn-up--barbershop:focus {
+    background-color: #1a1a1a;
+  }
+}
+@media (min-width: 1500px) {
+  .btn-up {
+    right: 8%;
+  }
+}
+@media (min-width: 1800px) {
+  .btn-up {
+    right: 15%;
+  }
+}

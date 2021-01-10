@@ -1,0 +1,56 @@
+.page-header {
+  box-shadow: 0px -7px 15px 0px rgba(50, 50, 50, 0.5);
+}
+
+.page-header__logo {
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.page-header__email {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .page-header__logo {
+    margin: 0;
+    width: 60px;
+    height: 60px;
+  }
+  .page-header__email {
+    display: block;
+    margin: auto 0;
+    position: relative;
+    padding-left: 30px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 0;
+      width: 25px;
+      height: 23px;
+      background-image: url('/portfolio/dist/assets/img/email-icon.svg');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    width: 70px;
+    height: 70px;
+  }
+}

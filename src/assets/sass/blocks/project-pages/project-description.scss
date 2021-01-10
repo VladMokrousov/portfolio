@@ -1,0 +1,152 @@
+.project-description {
+  margin-bottom: 60px;
+}
+.project-description__functional-wrapper {
+  margin-bottom: 40px;
+}
+
+.project-description__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 21px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+.project-description__title--eightball {
+  color: #4f00b6;
+}
+.project-description__title--pixel-hunter {
+  color: #719987;
+}
+.project-description__title--toxin {
+  color: #5a4b7b;
+}
+.project-description__title--kekstagram {
+  color: #efcf00;
+}
+.project-description__title--code-and-magic {
+  color: #4749fd;
+}
+.project-description__title--portfolio {
+  color: #bd1bf7;
+}
+.project-description__title--mishka {
+  color: #63d1bb;
+}
+.project-description__title--device {
+  color: #ffc600;
+}
+.project-description__title--barbershop {
+  color: #ff9c38;
+}
+.project-description__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-description__item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  line-height: 1.35;
+  color: #545454;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url(/assets/img/tick.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.project-description__link--ts {
+  text-decoration: underline;
+  font-weight: 700;
+  color: #bd1bf7;
+  transition-duration: 0.3s;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+.project-description__link--ts-pixel-hunter {
+  color: #719987;
+}
+.project-description__link--ts-toxin {
+  color: #5a4b7b;
+}
+.project-description__link--ts-kekstagram {
+  color: #efcf00;
+}
+.project-description__item--temporarily-hidden {
+  display: none;
+}
+.project-description__btn {
+  padding: 10px 20px;
+  border: 1px solid #bd1bf7;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #545454;
+  transition-duration: 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+.project-description__btn--eightball {
+  border: 1px solid #4f00b6;
+}
+.project-description__btn--toxin {
+  border: 1px solid #5a4b7b;
+}
+.project-description__btn--mishka {
+  border: 1px solid #63d1bb;
+}
+
+@media (min-width: $tablet-width) {
+  .project-description {
+    margin-bottom: 90px;
+  }
+
+  .project-description__functional-wrapper {
+    margin-bottom: 50px;
+  }
+  .project-description__title {
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  .project-description__item {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    font-size: 17px;
+    line-height: 1.5;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .project-description__btn {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .project-description__functional-wrapper,
+  .project-description__technologies-wrapper {
+    width: 900px;
+  }
+}
