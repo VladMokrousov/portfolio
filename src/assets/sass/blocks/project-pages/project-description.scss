@@ -1,4 +1,5 @@
 .project-description {
+  padding-top: 50px;
   margin-bottom: 60px;
 }
 .project-description__functional-wrapper {
@@ -19,25 +20,25 @@
   color: #719987;
 }
 .project-description__title--toxin {
-  color: #5a4b7b;
+  color: #7764a0;
 }
 .project-description__title--kekstagram {
-  color: #efcf00;
+  color: #dcbf00;
 }
 .project-description__title--code-and-magic {
-  color: #4749fd;
+  color: #3637c3;
 }
 .project-description__title--portfolio {
-  color: #bd1bf7;
+  color: #9715c5;
 }
 .project-description__title--mishka {
-  color: #63d1bb;
+  color: #54af9d;
 }
 .project-description__title--device {
-  color: #ffc600;
+  color: #e4b200;
 }
 .project-description__title--barbershop {
-  color: #ff9c38;
+  color: #c56400;
 }
 .project-description__list {
   margin: 0;
@@ -82,17 +83,17 @@
   color: #719987;
 }
 .project-description__link--ts-toxin {
-  color: #5a4b7b;
+  color: #7764a0;
 }
 .project-description__link--ts-kekstagram {
-  color: #efcf00;
+  color: #dcbf00;
 }
 .project-description__item--temporarily-hidden {
   display: none;
 }
 .project-description__btn {
   padding: 10px 20px;
-  border: 1px solid #bd1bf7;
+  border: 1px solid #9715c5;
   background-color: transparent;
   outline: none;
   cursor: pointer;
@@ -110,14 +111,15 @@
   border: 1px solid #4f00b6;
 }
 .project-description__btn--toxin {
-  border: 1px solid #5a4b7b;
+  border: 1px solid #7764a0;
 }
 .project-description__btn--mishka {
-  border: 1px solid #63d1bb;
+  border: 1px solid #54af9d;
 }
 
 @media (min-width: $tablet-width) {
   .project-description {
+    padding-top: 80px;
     margin-bottom: 90px;
   }
 

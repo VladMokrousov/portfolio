@@ -1,6 +1,6 @@
 .portfolio {
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 .portfolio__title {
@@ -52,7 +52,7 @@
 .portfolio__item--eightball {
   background: linear-gradient(to bottom right, #fcde47, #a68a00);
 }
-.portfolio__item--pixel_hunter {
+.portfolio__item--pixel-hunter {
   background: linear-gradient(to bottom right, #a8e3c8, #719987);
 }
 .portfolio__item--toxin {
@@ -102,7 +102,7 @@
   top: 80px;
   left: 80px;
 }
-.portfolio__logo--pixel_hunter {
+.portfolio__logo--pixel-hunter {
   top: 90px;
   left: 40px;
 }
@@ -139,7 +139,7 @@
   border-top: 4px solid #5005b3;
   border-image: linear-gradient(to right, #5005b3 0%, transparent 100%);
 }
-.portfolio__description-wrapper--pixel_hunter {
+.portfolio__description-wrapper--pixel-hunter {
   border-top: 4px solid #de1f1f;
   border-image: linear-gradient(to right, #de1f1f 0%, transparent 100%);
 }
@@ -190,7 +190,7 @@
 .portfolio__highlighted--eightball {
   color: #5005b3;
 }
-.portfolio__highlighted--pixel_hunter,
+.portfolio__highlighted--pixel-hunter,
 .portfolio__highlighted--mishka,
 .portfolio__highlighted--device {
   color: #000;
@@ -217,7 +217,7 @@
 @media (min-width: $tablet-width) {
   .portfolio {
     padding-top: 60px;
-    padding-bottom: 80px;
+    padding-bottom: 90px;
   }
 
   .portfolio__title {
@@ -260,7 +260,7 @@
     width: 120px;
     height: 120px;
   }
-  .portfolio__logo--pixel_hunter {
+  .portfolio__logo--pixel-hunter {
     top: 115px;
     left: 60px;
     width: 200px;
@@ -347,7 +347,7 @@
     top: 95px;
     left: 110px;
   }
-  .portfolio__logo--pixel_hunter,
+  .portfolio__logo--pixel-hunter,
   .portfolio__logo--toxin {
     left: 65px;
   }
