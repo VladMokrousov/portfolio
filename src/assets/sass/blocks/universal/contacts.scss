@@ -89,7 +89,7 @@
 .contacts__item--telegram {
   transition-duration: 0.3s;
   outline: none;
-
+  -webkit-tap-highlight-color: transparent;
   &::after {
     content: '';
     position: absolute;
