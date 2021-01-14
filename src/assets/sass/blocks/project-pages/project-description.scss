@@ -69,7 +69,7 @@
 .project-description__link--ts {
   text-decoration: underline;
   font-weight: 700;
-  color: #bd1bf7;
+
   transition-duration: 0.3s;
   -webkit-tap-highlight-color: transparent;
   &:hover {
@@ -80,13 +80,13 @@
     opacity: 0.3;
   }
 }
-.project-description__link--ts-pixel-hunter {
+.project-description__link--pixel-hunter {
   color: #719987;
 }
-.project-description__link--ts-toxin {
+.project-description__link--toxin {
   color: #7764a0;
 }
-.project-description__link--ts-kekstagram {
+.project-description__link--kekstagram {
   color: #dcbf00;
 }
 .project-description__item--temporarily-hidden {
@@ -94,7 +94,6 @@
 }
 .project-description__btn {
   padding: 10px 20px;
-  border: 1px solid #9715c5;
   background-color: transparent;
   outline: none;
   cursor: pointer;
@@ -113,6 +112,9 @@
 }
 .project-description__btn--toxin {
   border: 1px solid #7764a0;
+}
+.project-description__btn--portfolio {
+  border: 1px solid #9715c5;
 }
 .project-description__btn--mishka {
   border: 1px solid #54af9d;

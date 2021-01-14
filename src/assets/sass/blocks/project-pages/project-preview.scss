@@ -1,8 +1,6 @@
 .project-preview {
   position: relative;
   min-height: 100vh;
-
-  background: linear-gradient(to top right, #fff 30%, rgba(151, 33, 194, 0.9) 100%);
 }
 .project-preview--eightball {
   background: linear-gradient(to bottom right, #340077, #6e00ff);
@@ -34,6 +32,7 @@
 
 .project-preview__content-wrapper {
   padding-top: 20vh;
+  padding-bottom: 60px;
 }
 .project-preview__title {
   display: block;
@@ -53,14 +52,12 @@
   font-size: 30px;
 }
 .project-preview__title--pixel-hunter .project-preview__title--strong {
-  font-size: 27px;
+  font-size: 29px;
 }
 
 .project-preview__link {
-  position: relative;
   -webkit-tap-highlight-color: transparent;
 }
-
 .project-preview__image-bundle {
   display: inline-block;
   width: 0;
@@ -86,7 +83,6 @@
   position: absolute;
   left: 50%;
   bottom: 25px;
-
   transform: rotate(90deg) translateY(50%);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -100,27 +96,18 @@
 
 @media (min-width: $tablet-width) {
   .project-preview__content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
     padding-top: 15vh;
-  }
-  .project-preview__link {
-    width: 430px;
+    padding-bottom: 50px;
   }
 
   .project-preview__title {
-    width: 550px;
     font-size: 40px;
     margin-bottom: 50px;
   }
 
-  .project-preview__title--strong {
-    font-size: 65px;
-  }
+  .project-preview__title--strong,
   .project-preview__title--pixel-hunter .project-preview__title--strong {
-    font-size: 57px;
+    font-size: 65px;
   }
 
   .project-preview__image {
@@ -146,10 +133,13 @@
 
 @media (min-width: $desktop-width) {
   .project-preview__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 20vh;
+    padding-bottom: 60px;
   }
   .project-preview__link {
-    padding-top: 0;
     width: 450px;
   }
 
@@ -158,32 +148,23 @@
     padding-top: 150px;
   }
   .project-preview__title--eightball {
-    width: 380px;
     padding-left: 130px;
   }
   .project-preview__title--toxin {
-    width: 450px;
     padding-left: 60px;
   }
   .project-preview__title--kekstagram {
-    width: 480px;
     padding-left: 10px;
   }
-  .project-preview__title--code-and-magic {
-    width: 500px;
-  }
+
   .project-preview__title--portfolio {
-    width: 400px;
     padding-left: 110px;
   }
   .project-preview__title--mishka,
   .project-preview__title--device {
-    width: 370px;
     padding-left: 150px;
   }
-  // .project-preview__link--eightball {
-  //   padding-right: 50px;
-  // }
+
   .project-preview__link--eightball,
   .project-preview__link--toxin,
   .project-preview__link--kekstagram,
@@ -194,8 +175,6 @@
     padding-right: 70px;
   }
   .project-preview__image {
-    width: 460px;
-    height: 460px;
     transform-origin: right top;
     transform: perspective(900px) rotateX(40deg) rotateY(-30deg) rotate(10deg) translateX(-25px)
       scale(0.88);

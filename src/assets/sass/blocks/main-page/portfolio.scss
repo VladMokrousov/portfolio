@@ -6,7 +6,6 @@
 .portfolio__title {
   margin-top: 0;
   margin-bottom: 60px;
-
   text-align: center;
   font-size: 27px;
   line-height: 30px;
@@ -40,7 +39,6 @@
   position: relative;
   margin-bottom: 20px;
   width: 260px;
-
   min-height: 260px;
   border-radius: 20px;
   -webkit-tap-highlight-color: transparent;
@@ -156,15 +154,15 @@
   border-top: 4px solid #29ff6d;
   border-image: linear-gradient(to right, #29ff6d 0%, transparent 100%);
 }
-.portfolio__description-wrapper--portfolio,
-.portfolio__description-wrapper--barbershop {
-  border-top: 4px solid #fff;
-  border-image: linear-gradient(to right, #fff 0%, transparent 100%);
-}
 .portfolio__description-wrapper--mishka,
 .portfolio__description-wrapper--device {
   border-top: 4px solid #000;
   border-image: linear-gradient(to right, #000 0%, transparent 100%);
+}
+.portfolio__description-wrapper--portfolio,
+.portfolio__description-wrapper--barbershop {
+  border-top: 4px solid #fff;
+  border-image: linear-gradient(to right, #fff 0%, transparent 100%);
 }
 
 .portfolio__description-wrapper {
@@ -190,11 +188,7 @@
 .portfolio__highlighted--eightball {
   color: #5005b3;
 }
-.portfolio__highlighted--pixel-hunter,
-.portfolio__highlighted--mishka,
-.portfolio__highlighted--device {
-  color: #000;
-}
+
 .portfolio__highlighted--toxin {
   color: #003af7;
 }
@@ -208,6 +202,11 @@
 
 .portfolio__highlighted--portfolio {
   color: #15ff00;
+}
+.portfolio__highlighted--pixel-hunter,
+.portfolio__highlighted--mishka,
+.portfolio__highlighted--device {
+  color: #000;
 }
 
 .portfolio__highlighted--barbershop {
@@ -323,7 +322,6 @@
 
   .portfolio__title {
     margin-bottom: 160px;
-
     text-align: left;
     font-size: 53px;
     line-height: 57px;
@@ -352,21 +350,21 @@
     left: 65px;
   }
 
-  .portfolio__logo--kekstagram,
-  .portfolio__logo--mishka {
-    left: 55px;
-  }
-  .portfolio__logo--code-and-magic,
-  .portfolio__logo--barbershop {
-    left: 45px;
-  }
   .portfolio__logo--portfolio {
     top: 95px;
     left: 115px;
+  }
+  .portfolio__logo--kekstagram,
+  .portfolio__logo--mishka {
+    left: 55px;
   }
 
   .portfolio__logo--device {
     top: 130px;
     left: 55px;
+  }
+  .portfolio__logo--code-and-magic,
+  .portfolio__logo--barbershop {
+    left: 45px;
   }
 }

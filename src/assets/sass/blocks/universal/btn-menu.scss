@@ -19,12 +19,9 @@
     left: 0;
     width: 30px;
     height: 2px;
+    transition-duration: 0.3s;
+  }
 
-    transition-duration: 0.3s;
-  }
-  &.scrolled::before {
-    transition-duration: 0.3s;
-  }
   &:hover,
   &:focus {
     opacity: 0.6;
