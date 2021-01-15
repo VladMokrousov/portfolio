@@ -52,7 +52,7 @@
   font-size: 30px;
 }
 .project-preview__title--pixel-hunter .project-preview__title--strong {
-  font-size: 29px;
+  font-size: 27px;
 }
 
 .project-preview__link {
@@ -105,9 +105,11 @@
     margin-bottom: 50px;
   }
 
-  .project-preview__title--strong,
-  .project-preview__title--pixel-hunter .project-preview__title--strong {
+  .project-preview__title--strong {
     font-size: 65px;
+  }
+  .project-preview__title--pixel-hunter .project-preview__title--strong {
+    font-size: 62px;
   }
 
   .project-preview__image {
