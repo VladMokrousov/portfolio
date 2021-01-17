@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -8,7 +9,18 @@ const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
   assets: 'assets/',
+  pugPages: path.join(__dirname, '../src/pug/pages'),
 };
+
+const pugPages = fs.readdirSync(PATHS.pugPages);
+
+const htmlPages = pugPages.map((item) => {
+  if (item == 'main-page.pug') {
+    return item.replace('main-page.pug', 'index.html');
+  } else {
+    return item.replace('.pug', '.html');
+  }
+});
 
 module.exports = {
   externals: {
@@ -16,7 +28,6 @@ module.exports = {
   },
 
   entry: {
-    // main: PATHS.src,  //Заменяет ./src/index.js Webpack сам понимает, что ему нужно взять
     main: `${PATHS.src}/main.js`,
     innerPage: `${PATHS.src}/inner-page.js`,
     forPageWithChangeMenuColor: `${PATHS.src}/forPageWithChangeMenuColor.js`,
@@ -24,8 +35,8 @@ module.exports = {
   },
 
   output: {
-    filename: `${PATHS.assets}js/[name].js`, // При использованиии [name] название берется из ключа объекта точки входа. Заменяет [name].js
-    path: PATHS.dist, //Заменяет path.resolve(__dirname, './dist')
+    filename: `${PATHS.assets}js/[name].js`, // При использованиии [name] название берется из ключа объекта точки входа
+    path: PATHS.dist,
     publicPath: '/', //С этим параметром девсервер будет работать только при наличии файлов в папке dist
   },
   optimization: {
@@ -80,7 +91,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-            }, //Зачем?
+            },
           },
           {
             loader: 'postcss-loader',
@@ -89,13 +100,13 @@ module.exports = {
               config: {
                 path: `./postcss.config.js`,
               },
-            }, //Зачем? Было path: `${PATHS.src}/js/config/postcss.config.js`
+            },
           },
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-            }, //Зачем?
+            },
           },
         ],
       },
@@ -109,7 +120,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-            }, //Зачем?
+            },
           },
           {
             loader: 'postcss-loader',
@@ -118,7 +129,7 @@ module.exports = {
               config: {
                 path: `./postcss.config.js`,
               },
-            }, //Зачем? Было path: `${PATHS.src}/js/config/postcss.config.js`
+            },
           },
         ],
       },
@@ -133,7 +144,7 @@ module.exports = {
     new CleanWebpackPlugin(),
 
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].css`, //style.css
+      filename: `${PATHS.assets}css/[name].css`,
       //chankFilename: "[id].css"
     }),
     new CopyWebpackPlugin([
@@ -150,55 +161,14 @@ module.exports = {
         to: '',
       },
     ]),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/pages/main-page.pug`,
-      filename: './index.html',
-      inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
-    }),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/pages/barbershop.pug`,
-      filename: './barbershop.html',
-      inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
-    }),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/pages/device.pug`,
-      filename: './device.html',
-      inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
-    }),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/pages/mishka.pug`,
-      filename: './mishka.html',
-      inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
-    }),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/pages/portfolio.pug`,
-      filename: './portfolio.html',
-      inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
-    }),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/pages/code-and-magic.pug`,
-      filename: './code-and-magic.html',
-      inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
-    }),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/pages/kekstagram.pug`,
-      filename: './kekstagram.html',
-      inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
-    }),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/pages/toxin.pug`,
-      filename: './toxin.html',
-      inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
-    }),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/pages/pixel-hunter.pug`,
-      filename: './pixel-hunter.html',
-      inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
-    }),
-    new HtmlWebpackPlugin({
-      template: `${PATHS.src}/pug/pages/eightball.pug`,
-      filename: './eightball.html',
-      inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
-    }),
+
+    ...pugPages.map(
+      (page, index) =>
+        new HtmlWebpackPlugin({
+          template: `${PATHS.pugPages}/${page}`,
+          filename: `./${htmlPages[index]}`,
+          inject: false, //Отключает автоматическую вставку тега link с css и тега script в главный html файл, который собирается в dist
+        })
+    ),
   ],
 };
